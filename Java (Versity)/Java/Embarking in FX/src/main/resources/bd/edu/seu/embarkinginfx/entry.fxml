@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.embarkinginfx.DressEntryController">
+   <children>
+      <Button layoutX="520.0" layoutY="21.0" mnemonicParsing="false" onAction="#showListEvent" onMouseClicked="#showListEvent" text="Show List" />
+      <Line endX="-100.0" endY="466.0" layoutX="400.0" layoutY="73.0" startX="-100.0" startY="-12.0" stroke="#b9abab" />
+      <Label layoutX="20.0" layoutY="63.0" text="Dress Name: (Jack &amp; Jane Hoodie)" textFill="#4f4d4d">
+         <font>
+            <Font name="Microsoft Tai Le" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dressNameField" layoutX="20.0" layoutY="84.0" prefHeight="25.0" prefWidth="264.0" promptText="Dress Name" />
+      <Label fx:id="nameErrorLabel" layoutX="20.0" layoutY="109.0" textFill="#dd2626" />
+      <Label layoutX="20.0" layoutY="138.0" text="Dress Type: (Hoodie/Sweater)" textFill="#4f4d4d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="dressTypeChoiceBox" layoutX="20.0" layoutY="158.0" prefHeight="25.0" prefWidth="264.0" />
+      <Label fx:id="typeErrorLabel" layoutX="20.0" layoutY="183.0" textFill="#dd2626" />
+      <Label layoutX="20.0" layoutY="215.0" text="Available Size: (Medium/Large)" textFill="#4f4d4d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="sizeComboBox" layoutX="20.0" layoutY="235.0" prefHeight="25.0" prefWidth="264.0" />
+      <Label fx:id="sizeErrorLabel" layoutX="20.0" layoutY="260.0" textFill="#dd2626" />
+      <Label layoutX="20.0" layoutY="293.0" text="Dress Color: (White/Black)" textFill="#4f4d4d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="dressColorPicker" layoutX="20.0" layoutY="313.0" prefHeight="25.0" prefWidth="264.0" />
+      <Label fx:id="colorErrorLabel" layoutX="20.0" layoutY="338.0" textFill="#dd2626" />
+      <Label layoutX="20.0" layoutY="369.0" text="Price: (500 - 5000)" textFill="#4f4d4d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Slider fx:id="priceSlider" blockIncrement="0.0" layoutX="20.0" layoutY="391.0" majorTickUnit="550.0" max="6000.0" min="400.0" minorTickCount="550" prefHeight="25.0" prefWidth="264.0" showTickLabels="true" showTickMarks="true" value="3300.0" />
+      <Label fx:id="priceErrorLabel" layoutX="20.0" layoutY="422.0" textFill="#dd2626" />
+      <Label layoutX="23.0" layoutY="461.0" prefHeight="20.0" prefWidth="91.0" text="Dress Details:" textFill="#4f4d4d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="dressTextArea" layoutX="23.0" layoutY="481.0" prefHeight="66.0" prefWidth="258.0" promptText="Dress Details" />
+      <Label fx:id="detailsErrorLabel" layoutX="28.0" layoutY="547.0" textFill="#dd2626" />
+      <Button defaultButton="true" layoutX="255.0" layoutY="564.0" mnemonicParsing="false" onAction="#saveEvent" prefHeight="47.0" prefWidth="91.0" text="Save" textFill="#030303">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="322.0" layoutY="63.0" text="Last purchase Date: (2025-12-20)" textFill="#4f4d4d">
+         <font>
+            <Font name="Microsoft Tai Le" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="purchaseDatePicker" layoutX="322.0" layoutY="84.0" prefHeight="25.0" prefWidth="258.0" promptText="2025-12-20" />
+      <Label fx:id="dateErrorLabel" layoutX="322.0" layoutY="109.0" textFill="#dd2626" />
+      <Label layoutX="322.0" layoutY="138.0" text="Available Quantity: (0 - 500)" textFill="#4f4d4d">
+         <font>
+            <Font name="Microsoft Tai Le" size="14.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="quantitySpinner" layoutX="322.0" layoutY="158.0" prefHeight="25.0" prefWidth="258.0" />
+      <Label fx:id="qualityErrorLabel" layoutX="322.0" layoutY="183.0" textFill="#dd2626" />
+      <Label layoutX="323.0" layoutY="215.0" text="Discount Code: (SECRET20)" textFill="#4f4d4d">
+         <font>
+            <Font name="Microsoft Tai Le" size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="discountField" layoutX="322.0" layoutY="235.0" prefHeight="25.0" prefWidth="251.0" promptText="Discount Code" />
+      <Label fx:id="codeErrorLabel" layoutX="322.0" layoutY="260.0" textFill="#dd2626" />
+      <Label layoutX="325.0" layoutY="293.0" text="Targeted Customer: (Male/Female)" textFill="#4f4d4d">
+         <font>
+            <Font name="Microsoft Tai Le" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="325.0" layoutY="317.0" mnemonicParsing="false" text="Male">
+         <font>
+            <Font name="Microsoft Tai Le" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="genderRadio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="424.0" layoutY="317.0" mnemonicParsing="false" text="Female" toggleGroup="$genderRadio">
+         <font>
+            <Font name="Microsoft Tai Le" size="14.0" />
+         </font>
+      </RadioButton>
+      <Label fx:id="customerErrorLabel" layoutX="325.0" layoutY="338.0" textFill="#dd2626" />
+      <CheckBox fx:id="agreeCheckBox" layoutX="325.0" layoutY="379.0" mnemonicParsing="false" text="Enable Facebook Boosting">
+         <font>
+            <Font name="Microsoft Tai Le" size="14.0" />
+         </font>
+      </CheckBox>
+      <ImageView fx:id="imageView" fitHeight="82.0" fitWidth="98.0" layoutX="464.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="475.0" layoutY="535.0" mnemonicParsing="false" onAction="#uploadEvent" prefHeight="25.0" prefWidth="76.0" text="Upload" />
+      <Label fx:id="pictureLabel" layoutX="458.0" layoutY="556.0" textFill="#dd2626" />
+      <Label layoutX="321.0" layoutY="461.0" prefHeight="20.0" prefWidth="121.0" text="Upload Picture:" textFill="#4f4d4d">
+         <font>
+            <Font name="Microsoft Tai Le" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="14.0" text="Dress Collection" textFill="#5f7cd0" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="myPrice" layoutX="232.0" layoutY="370.0" prefHeight="19.0" prefWidth="47.0" />
+      <Label fx:id="discountErrorField" layoutX="321.0" layoutY="260.0" />
+   </children>
+</AnchorPane>

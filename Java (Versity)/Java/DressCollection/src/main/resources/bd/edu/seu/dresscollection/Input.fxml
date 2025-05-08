@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane pickOnBounds="false" prefHeight="650.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.dresscollection.InputConroller">
+   <children>
+      <Label layoutX="60.0" layoutY="67.0" text="Dress Name : (jack &amp; jones Hoddie)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dressname" layoutX="60.0" layoutY="90.0" minWidth="250.0" onAction="#DressnameAlert" onMouseClicked="#DressnameAlert" />
+      <Text fill="#c300ff" layoutX="252.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dress Collection" underline="true">
+         <font>
+            <Font name="System Italic" size="31.0" />
+         </font>
+      </Text>
+      <Label layoutX="60.0" layoutY="139.0" text="Dress Type : ( Hoddie / Sweter )  ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="dresschoice" layoutX="60.0" layoutY="163.0" minWidth="250.0" prefWidth="150.0" />
+      <Label layoutX="60.0" layoutY="218.0" text="Available Size : ( Medium/Large) ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="sizechoice" layoutX="60.0" layoutY="241.0" minWidth="250.0" onMouseMoved="#DressSizeAlert" prefWidth="150.0" />
+      <Label layoutX="60.0" layoutY="298.0" text="Dress Colour : ( White / Black)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="colorpicker" layoutX="60.0" layoutY="322.0" minWidth="250.0" onMouseClicked="#DressClourAlert" />
+      <Label layoutX="63.0" layoutY="382.0" text="Price : ( 500 - 5000 )">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="445.0" prefHeight="25.0" prefWidth="124.0" text="Dress Deatils:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="textarea" layoutX="63.0" layoutY="470.0" minWidth="250.0" onKeyTyped="#DressDescriptionAlert" prefHeight="75.0" prefWidth="200.0" />
+      <Label layoutX="422.0" layoutY="66.0" text="Last Purchase Date : 23-12-2020">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateselect" layoutX="421.0" layoutY="88.0" minWidth="250.0" onAction="#DressDateSelect" />
+      <Label layoutX="420.0" layoutY="142.0" text="Available Quantity ( 0 - 500 )">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="quantity" layoutX="421.0" layoutY="163.0" minWidth="250.0" onMouseClicked="#DressQuantityAlert" />
+      <Label layoutX="423.0" layoutY="218.0" text="Discount Code : ( SEFUFH12) ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="discount" layoutX="421.0" layoutY="241.0" minWidth="250.0" onAction="#DressDicountAlert" />
+      <Label layoutX="422.0" layoutY="293.0" text="Targated Custome ( Male / Female ) ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="male" layoutX="422.0" layoutY="321.0" mnemonicParsing="false" onAction="#DressChoiceAlert" text="Male">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="genderToggle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="female" layoutX="528.0" layoutY="321.0" mnemonicParsing="false" onAction="#DressChoiceAlert" text="Female" toggleGroup="$genderToggle">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <CheckBox fx:id="check" layoutX="426.0" layoutY="381.0" mnemonicParsing="false" onAction="#DressBoostCheck" text="Enable Facebook Boosting ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="428.0" layoutY="425.0" text="Upload Picture : ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageSelect" fitHeight="113.0" fitWidth="117.0" layoutX="555.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../java/ImageAll/fneurngeur-200x200.png" />
+         </image></ImageView>
+      <Button layoutX="359.0" layoutY="550.0" mnemonicParsing="false" onAction="#FinalSave" text="Save" textFill="#0a00fa">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="586.0" layoutY="550.0" mnemonicParsing="false" onAction="#DressImageUpload" text="Upload" />
+      <Label fx:id="dressnamealert" layoutX="60.0" layoutY="112.0" text="Dress name is required." textFill="#dd0d0d" />
+      <Label fx:id="dresstypealert" layoutX="60.0" layoutY="185.0" onMouseMoved="#DresschoiceAlert" text="Dress type is required." textFill="#dd0d0d" />
+      <Label fx:id="sizealert" layoutX="60.0" layoutY="264.0" text="Available size is required." textFill="#dd0d0d" />
+      <Label fx:id="colouralert" layoutX="60.0" layoutY="345.0" text="Dress colour is required." textFill="#dd0d0d" />
+      <Label fx:id="pricealert" layoutX="63.0" layoutY="423.0" onMouseReleased="#DressPriceAlert" text="Price cant be less then 500." textFill="#dd0d0d" />
+      <Label fx:id="textareaalert" layoutX="65.0" layoutY="544.0" text="Only 50 character is allowed." textFill="#dd0d0d" />
+      <Label fx:id="datealert" layoutX="422.0" layoutY="111.0" onMouseClicked="#DressDateSelect" text="Date cant be future date." textFill="#dd0d0d" />
+      <Label fx:id="quantityalert" layoutX="423.0" layoutY="186.0" onMouseClicked="#DressQuantityAlert" text="Quantity cant be less the zero." textFill="#dd0d0d" />
+      <Label fx:id="discountalert" layoutX="422.0" layoutY="263.0" onMouseClicked="#DressDicountAlert" text="Same code already exists." textFill="#dd0d0d" />
+      <Label fx:id="choicealert" layoutX="424.0" layoutY="345.0" onMouseClicked="#DressChoiceAlert" text="Targated customer is required." textFill="#dd0d0d" />
+      <Label fx:id="imagealert" layoutX="565.0" layoutY="574.0" text="Picture is required." textFill="#dd0d0d" />
+      <Label layoutX="222.0" layoutY="381.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Slider fx:id="PriceRange" layoutX="65.0" layoutY="407.0" max="5000.0" minWidth="250.0" onMouseReleased="#DressPriceAlert" />
+      <Label layoutX="220.0" layoutY="381.0" text="Amount :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Text fx:id="amount" layoutX="291.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label fx:id="counter" layoutX="291.0" layoutY="543.0" onKeyTyped="#DressDescriptionAlert" prefHeight="25.0" prefWidth="21.0" text="0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="543.0" prefHeight="25.0" prefWidth="64.0" text="Character :" />
+      <Button layoutX="654.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToFinalScene" text="Show List" />
+   </children>
+</AnchorPane>
